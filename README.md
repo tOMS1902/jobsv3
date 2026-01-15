@@ -8,6 +8,15 @@ This contains everything you need to run your app locally.
 
 View your app in AI Studio: https://ai.studio/apps/drive/1U7WpsV8R3VTdIOgtNJ1hHX2ni04rGXYV
 
+## Database Options
+
+This application supports two database options:
+
+1. **PostgreSQL/Cloud SQL** - See `database_schema.sql` for SQL schema
+2. **MongoDB** - See `database_schema_mongodb.js` and `MONGODB_SETUP.md` for MongoDB setup
+
+Choose the database that best fits your needs. MongoDB setup guide provides complete instructions for setting up a backend API.
+
 ## Run Locally
 
 **Prerequisites:**  Node.js (v16 or higher)
