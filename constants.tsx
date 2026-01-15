@@ -1,5 +1,5 @@
 
-import { JobListing, Application } from './types.ts';
+import { JobListing, Application } from './types';
 
 // Fresh start: No pre-existing jobs or applications
 export const MOCK_JOBS: JobListing[] = [];
