@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { UserMode } from '../types.ts';
-import { IRISH_UNIVERSITIES } from '../constants.tsx';
+import { UserMode } from '../types';
+import { IRISH_UNIVERSITIES } from '../constants';
 
 interface AuthModalProps {
   onClose: () => void;

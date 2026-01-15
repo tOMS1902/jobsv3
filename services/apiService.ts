@@ -1,5 +1,5 @@
 
-import { User, StudentProfile, JobListing } from '../types.ts';
+import { User, StudentProfile, JobListing } from '../types';
 
 /**
  * Get the backend API base URL from environment variables
