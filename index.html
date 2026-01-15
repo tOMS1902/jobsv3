@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PartTimeJobs.ie - Irish Campus Job Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Inter:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+    <script>
+      // Process shim for browser environments
+      window.process = window.process || { env: {} };
+      
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              magenta: {
+                DEFAULT: '#A4195C',
+                50: '#FDEAF2',
+                100: '#FBD5E6',
+                200: '#F7ACCD',
+                300: '#F383B4',
+                400: '#EF599B',
+                500: '#A4195C',
+                600: '#8A154D',
+                700: '#6F113E',
+                800: '#550D2F',
+                900: '#3A0920'
+              },
+              warm: {
+                50: '#FDFCFB',
+                100: '#F7F5F2',
+                200: '#E9E4DE',
+                300: '#D5CEC6',
+                400: '#BDB1A6',
+                500: '#9B8C7E'
+              }
+            },
+            fontFamily: {
+              heading: ['Plus Jakarta Sans', 'sans-serif'],
+              body: ['Inter', 'sans-serif']
+            },
+            borderRadius: {
+              'xl': '0.75rem',
+              '2xl': '1rem'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .dark .glass {
+        background: rgba(17, 17, 17, 0.7);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .material-symbols-fill {
+        font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #A4195C44;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #A4195C88;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react-dom": "https://esm.sh/react-dom@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0"
+      }
+    }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-warm-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
