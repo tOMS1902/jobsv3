@@ -28,7 +28,12 @@ const AuthModal: React.FC<AuthModalProps> = ({ onClose, onSuccess, initialMode =
   });
 
   const validate = () => {
-    // Check for hardcoded test logins first (skip standard email validation for these)
+    // SECURITY NOTE: These are DEMO credentials for development/testing only
+    // In production, implement proper authentication with:
+    // - Hashed passwords (bcrypt/Argon2)
+    // - Secure session management (JWT with proper expiration)
+    // - Rate limiting to prevent brute force attacks
+    // - HTTPS-only transmission
     const isTestUser = (formData.email === 'user1' || formData.email === 'user2') && formData.password === 'toms1902';
     
     if (!isTestUser && !formData.email.includes('@')) {
@@ -72,7 +77,9 @@ const AuthModal: React.FC<AuthModalProps> = ({ onClose, onSuccess, initialMode =
       let finalUni = formData.university;
       let finalCompany = formData.companyName;
 
-      // Logic for hardcoded test logins
+      // SECURITY NOTE: Demo authentication logic - REPLACE IN PRODUCTION
+      // This uses hardcoded test credentials for development only
+      // Production should use proper backend authentication API
       if (isLogin && formData.password === 'toms1902') {
         if (formData.email === 'user1') {
           finalMode = UserMode.STUDENT;
@@ -97,12 +104,13 @@ const AuthModal: React.FC<AuthModalProps> = ({ onClose, onSuccess, initialMode =
         return;
       }
 
+      // SECURITY NOTE: Mock token - in production, use secure JWT from backend
       const mockUser = {
         mode: finalMode,
         email: formData.email,
         studentId: finalMode === UserMode.STUDENT ? 's-' + Math.random().toString(36).substr(2, 5) : undefined,
         employerId: finalMode === UserMode.EMPLOYER ? 'e-' + Math.random().toString(36).substr(2, 5) : undefined,
-        token: 'mock-jwt-token',
+        token: 'mock-jwt-token', // TODO: Replace with real JWT from authentication API
         firstName: finalMode === UserMode.STUDENT ? (finalFirstName || 'Student') : (finalCompany || 'Employer'),
         lastName: finalLastName,
         university: finalUni,
